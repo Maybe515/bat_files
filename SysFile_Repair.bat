@@ -1,20 +1,20 @@
 @echo off
 
 rem ===================
-rem   ŠÇ—ŽÒŒ ŒÀ Šm”F
+rem   ç®¡ç†è€…æ¨©é™ ç¢ºèª
 rem ===================
   openfiles > nul 2>&1
   if %ErrorLevel%==1 (
-    echo ŠÇ—ŽÒŒ ŒÀ‚ª‚ ‚è‚Ü‚¹‚ñBŠÇ—ŽÒŒ ŒÀ‚ÅŽÀs‚µ‚Ä‚­‚¾‚³‚¢B
+    echo ç®¡ç†è€…æ¨©é™ãŒã‚ã‚Šã¾ã›ã‚“ã€‚ç®¡ç†è€…æ¨©é™ã§å®Ÿè¡Œã—ã¦ãã ã•ã„ã€‚
     pause
     exit
   )
 
 rem ========================
-rem   ƒVƒXƒeƒ€ƒtƒ@ƒCƒ‹C³	
+rem   ã‚·ã‚¹ãƒ†ãƒ ãƒ•ã‚¡ã‚¤ãƒ«ä¿®æ­£	
 rem ========================
 :SYSCHK
-  set /p ANSWER="ƒVƒXƒeƒ€ƒtƒ@ƒCƒ‹‚ÌC³‚ðs‚¢‚Ü‚·B‚æ‚ë‚µ‚¢‚Å‚·‚©H (Y/N): "
+  set /p ANSWER="ã‚·ã‚¹ãƒ†ãƒ ãƒ•ã‚¡ã‚¤ãƒ«ã®ä¿®æ­£ã‚’è¡Œã„ã¾ã™ã€‚ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿ (Y/N): "
 
   if "%ANSWER%"=="y" (
     echo\
@@ -26,22 +26,22 @@ rem ========================
     goto SYSCHK
   )
 
-  echo sfc /scannow ‚ðŽÀs
+  echo sfc /scannow ã‚’å®Ÿè¡Œ
   sfc /scannow
   echo\
 
-  echo dism /Online /Cleanup-Image /RestoreHealth ‚ðŽÀs
+  echo dism /Online /Cleanup-Image /RestoreHealth ã‚’å®Ÿè¡Œ
   dism /Online /Cleanup-Image /RestoreHealth
   echo\
 
-  echo ‚·‚×‚Ä‚ÌƒVƒXƒeƒ€ƒXƒLƒƒƒ“‚ªŠ®—¹‚µ‚Ü‚µ‚½B
+  echo ã™ã¹ã¦ã®ã‚·ã‚¹ãƒ†ãƒ ã‚¹ã‚­ãƒ£ãƒ³ãŒå®Œäº†ã—ã¾ã—ãŸã€‚
   echo\
 
 rem ===============
-rem   Ä‹N“® Šm”F
+rem   å†èµ·å‹• ç¢ºèª
 rem ===============
 :REBCHK
-  set /p REBOOT="ƒRƒ“ƒsƒ…[ƒ^‚ðÄ‹N“®‚µ‚Ü‚·‚©H (Y/N): "
+  set /p REBOOT="ã‚³ãƒ³ãƒ”ãƒ¥ãƒ¼ã‚¿ã‚’å†èµ·å‹•ã—ã¾ã™ã‹ï¼Ÿ (Y/N): "
 
   if "%REBOOT%"=="y" (
     goto REBOOT
@@ -54,11 +54,11 @@ rem ===============
   )
 
 :END
-  echo ƒvƒƒZƒX‚ðI—¹‚µ‚Ü‚·B
+  echo ãƒ—ãƒ­ã‚»ã‚¹ã‚’çµ‚äº†ã—ã¾ã™ã€‚
   echo\
   pause
   exit
 
 :REBOOT
-  echo 5•bŒã‚ÉÄ‹N“®‚µ‚Ü‚·B
+  echo 5ç§’å¾Œã«å†èµ·å‹•ã—ã¾ã™ã€‚
   shutdown -r -t 5
